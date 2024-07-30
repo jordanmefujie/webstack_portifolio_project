@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <link rel="stylesheet" href="NavBar.css">
+
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <!--logo-->
+            <div class="logo-container">
+                <img src="./img/logo1.jpg" alt="" class="logo">
+                <h2 class="logo-text">LabManager</h2>
+            </div>
+            
+            <!--Links-->
+            <ul class="Navlinks">
+                <a href="forms/home.html"><li>Home</li></a>
+                <a href="forms/about.html"><li>About Us</li></a>
+                <a href="forms/services.html"><li>Services</li></a>
+                <a href="forms/contact.html"><li>Contact Us</li></a>
+            </ul>
+            <!--Buttons-->
+            <div class="button">
+                <button class="login"onclick="navigateTo('forms/login.html')" >login</button>
+                <button class="Register"onclick="navigateTo('forms/register.html')" >Register</button>
+            </div>
+        </nav>
+        <section class="hero-section">
+            <h3>Welcome To My <em><i>Wonderful</i></em> LabManager</h3>
+        </section>
+    </header>
+    
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabManager - Home</title>
+    <link rel="stylesheet" href="./home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        
+        .metrics-section, .search-section, .visual-section, .cta-section {
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .metrics-section {
+            background-color: #fff;
+        }
+        .search-section {
+            background-color: #f9f9f9;
+        }
+        .visual-section {
+            background-color: #fff;
+        }
+        .cta-section {
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .footer {
+            padding: 1px;
+            background-color: #333;
+            color: #f0f0f0;
+            text-align: center;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+    </style>
+
+    <!-- Include Chart.js library for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <!--logo-->
+        <div class="logo-container">
+            <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="../img/logo1.jpg" alt="LabManager Logo" class="logo" style="width: 50px; height: 50px; border-radius: 50%;">
+            <h2 class="logo-text" style="font-family: Arial, sans-serif; font-size: 24px; color: #333;">LabManager</h2>
+        </div>
+        <h2>LabManager</h2>
+            </div>
+            <!--Links-->
+            <ul class="Navlinks">
+                <a href="index.html"><li>Home</li></a>
+                <a href="about.html"><li>About Us</li></a>
+                <a href="services.html"><li>Services</li></a>
+                <a href="contact.html"><li>Contact Us</li></a>
+            </ul>
+            <!--Buttons-->
+            <div class="button">
+                <button class="login" onclick="navigateTo('login.html')">Login</button>
+                <button class="register" onclick="navigateTo('register.html')">Register</button>
+            </div>
+        </nav>
+        <section class="hero-section">
+            <h3>Welcome To My <em><i>Wonderful</i></em> LabManager</h3>
+        </section>
+    </header>
+    <section class="hero-section">
+            <h1>Welcome To LabManager</h1>
+            <p>LabManager is your comprehensive solution for 
+                managing laboratory operations efficiently and effectively. 
+                Whether you're a research institution, 
+                educational facility, or industrial lab, 
+                we provide tailored services and software solutions to 
+                meet your needs.</p>
+                <p class="importance">
+                    LabManager is a cutting-edge platform designed to 
+                    revolutionize laboratory management. It centralizes 
+                    operations, optimizes resource utilization, enhances 
+                    collaboration, and ensures compliance with industry standards. 
+                    With robust data management and analytical capabilities, 
+                    LabManager empowers researchers to make informed decisions 
+                    and achieve breakthroughs in their fields.
+                </p>
+            <a href="services.html" class="button">Explore Our Services</a>
+
+            <main>
+                <section class="metrics-section">
+                    <div class="container">
+                        <h2>Key Metrics Overview</h2>
+                        <p>Quick summaries or statistics related to laboratory operations:</p>
+                        <ul>
+                            <li>Number of active experiments: 45</li>
+                            <li>Average turnaround time for sample analysis: 3.5 days</li>
+                            <li>Percentage of completed tasks for the current month: 85%</li>
+                        </ul>
+                    </div>
+                </section>
+        
+                <section class="search-section">
+                    <div class="container">
+                        <h2>Search and Filter Options</h2>
+                        <p>Tools for users to search for specific information or filter data:</p>
+                        <input type="text" id="search" placeholder="Search experiments by name or date">
+                        <select id="filter-status">
+                            <option value="all">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                        <button onclick="performSearch()">Search</button>
+                    </div>
+                </section>
+        
+                <section class="visual-section">
+                    <div class="container">
+                        <h2>Visual Data Representation</h2>
+                        <p>Charts, graphs, or visual representations of data to illustrate trends:</p>
+                        <canvas id="experimentChart" width="50" height="25"></canvas>
+                        <canvas id="sampleChart" width="50" height="25"></canvas>
+                    </div>
+                </section>
+        
+                <section class="cta-section">
+                    <h2>Call-to-Action</h2>
+                    <p>Encouraging users to explore more features or contact for a demo:</p>
+                    <a href="services.html" class="button">Explore More</a><br><br>
+                    <a href="contact.html" class="button">Contact Us</a>
+                </section>
+            </main>
+        
+            <footer class="footer">
+                <p>Follow us:</p>
+                <di class="social-icons">
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook's logo"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter's logo"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn's logo"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google's logo"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Meta's logo"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple's logo"></a>
+                </div>
+                <p>&copy; 2024 LabManager. All rights reserved.</p>
+            </footer>
+
+
+        </div>
+    </section>
+    <script src="script/script.js"></script>
+    <script src="script/auth.js"></script>
+    <script>
+        // Example data for charts
+        const experimentData = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+            datasets: [{
+                label: 'Number of Experiments',
+                data: [10, 15, 20, 25, 30, 35],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        const sampleData = {
+            labels: ['Type A', 'Type B', 'Type C', 'Type D'],
+            datasets: [{
+                label: 'Sample Distribution',
+                data: [40, 30, 20, 10],
+                backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)'],
+                borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
+                borderWidth: 1
+            }]
+        };
+
+        // Render charts
+        const ctxExperiment = document.getElementById('experimentChart').getContext('2d');
+        new Chart(ctxExperiment, {
+            type: 'bar',
+            data: experimentData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const ctxSample = document.getElementById('sampleChart').getContext('2d');
+        new Chart(ctxSample, {
+            type: 'pie',
+            data: sampleData
+        });
+
+        function performSearch() {
+            const searchQuery = document.getElementById('search').value;
+            const filterStatus = document.getElementById('filter-status').value;
+            // Implement search and filter functionality here
+            console.log(`Search Query: ${searchQuery}, Filter Status: ${filterStatus}`);
+        }
+    </script>
+</body>
+</html>
