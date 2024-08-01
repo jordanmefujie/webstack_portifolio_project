@@ -1,0 +1,309 @@
+:root {
+    --lightashcolor: white;
+    --lightgreycolor: grey;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.hero button {
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+.hero button:hover {
+    background-color: #777;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.features div {
+    margin-bottom: 20px;
+}
+
+.features h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.features p {
+    font-size: 16px;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 16px;
+}
+
+.team {
+    margin-top: 30px;
+}
+
+.team h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.team div {
+    margin-bottom: 20px;
+}
+
+.team img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.history {
+    margin-top: 30px;
+}
+
+.history h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.services div {
+    margin-bottom: 20px;
+}
+
+.services h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.services p {
+    font-size: 16px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 16px;
+}
+
+.map {
+    margin-top: 30px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+/* Login and Register Sections */
+.login, .register {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.login h2, .register h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.login a, .register button {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    border: none;
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login a:hover, .register button:hover {
+    background-color: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .features h2, .about-us h2, .services h2, .contact-us h2 {
+        font-size: 24px;
+    }
+
+    .features h3, .about-us h3, .services h3, .team h3, .history h3 {
+        font-size: 18px;
+    }
+
+    .features p, .about-us p, .services p, .contact-info p {
+        font-size: 14px;
+    }
+
+    .team img {
+        width: 80px;
+    }
+
+    .map iframe {
+        height: 300px;
+    }
+}

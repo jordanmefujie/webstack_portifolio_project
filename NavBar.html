@@ -3,42 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavBar</title>
+    <title>LabManager</title>
     <link rel="stylesheet" href="NavBar.css">
 
     <script>
         function navigateTo(url) {
             window.location.href = url;
         }
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
     </script>
-    
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <!--logo-->
+        <nav class="navbar" role="navigation">
+            <!-- Logo -->
             <div class="logo-container">
-                <img src="./img/logo1.jpg" alt="" class="logo">
+                <img src="./img/logo1.jpg" alt="LabManager Logo" class="logo">
                 <h2 class="logo-text">LabManager</h2>
             </div>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
             
-            <!--Links-->
-            <ul class="Navlinks">
-                <a href="forms/home.html"><li>Home</li></a>
-                <a href="forms/about.html"><li>About Us</li></a>
-                <a href="forms/services.html"><li>Services</li></a>
-                <a href="forms/contact.html"><li>Contact Us</li></a>
+            <!-- Links -->
+            <ul class="nav-links">
+                <li><a href="forms/home.html">Home</a></li>
+                <li><a href="forms/about.html">About Us</a></li>
+                <li><a href="forms/services.html">Services</a></li>
+                <li><a href="forms/contact.html">Contact Us</a></li>
             </ul>
-            <!--Buttons-->
-            <div class="button">
-                <button class="login"onclick="navigateTo('forms/login.html')" >login</button>
-                <button class="Register"onclick="navigateTo('forms/register.html')" >Register</button>
+            
+            <!-- Buttons -->
+            <div class="button-container">
+                <button class="login" onclick="navigateTo('forms/login.html')">Login</button>
+                <button class="register" onclick="navigateTo('forms/register.html')">Register</button>
             </div>
         </nav>
-        <section class="hero-section">
-            <h3>Welcome To My <em><i>Wonderful</i></em> LabManager</h3>
-        </section>
     </header>
-    
+
+    <main>
+        <section class="hero-section">
+            <h3>Welcome To My <em>Wonderful</em> LabManager</h3>
+        </section>
+    </main>
 </body>
 </html>
