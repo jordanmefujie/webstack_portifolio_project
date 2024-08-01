@@ -4,32 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LabManager - About Us</title>
-    <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <!--logo-->
+            <!-- Logo -->
             <div class="logo-container">
-                <img src="./img/logo1.jpg" alt="" class="logo">
+                <img src="./img/logo1.jpg" alt="LabManager Logo" class="logo">
                 <h2 class="logo-text">LabManager</h2>
             </div>
-            <!--Links-->
-            <ul class="Navlinks">
-                <a href="index.html"><li>Home</li></a>
-                <a href="about.html"><li>About Us</li></a>
-                <a href="services.html"><li>Services</li></a>
-                <a href="contact.html"><li>Contact Us</li></a>
+            <!-- Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <!--Buttons-->
-            <div class="button">
+            <!-- Buttons -->
+            <div class="button-container">
                 <button class="login" onclick="navigateTo('login.html')">Login</button>
                 <button class="register" onclick="navigateTo('register.html')">Register</button>
             </div>
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
-        <section class="hero-section"></section>
-        <h3>About Us</h3>
-        <p>Information about LabManager...</p>
+        <section class="hero-section">
+            <h3>About Us</h3>
+            <p>Information about LabManager...</p>
+        </section>
     </header>
     <script src="script/script.js"></script>
     <script src="script/auth.js"></script>

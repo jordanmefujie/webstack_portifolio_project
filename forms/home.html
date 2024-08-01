@@ -49,6 +49,15 @@
 <body>
     <header>
         <nav class="navbar">
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+
+        <nav class="navbar">
             <!--logo-->
         <div class="logo-container">
             <div style="display: flex; align-items: center; gap: 10px;">
@@ -59,10 +68,10 @@
             </div>
             <!--Links-->
             <ul class="Navlinks">
-                <a href="index.html"><li>Home</li></a>
-                <a href="about.html"><li>About Us</li></a>
-                <a href="services.html"><li>Services</li></a>
-                <a href="contact.html"><li>Contact Us</li></a>
+                <a href="../forms/home.html"><li>Home</li></a>
+                <a href="../forms/about.html"><li>About Us</li></a>
+                <a href="../forms/service.html"><li>Services</li></a>
+                <a href="../forms/contact.html"><li>Contact Us</li></a>
             </ul>
             <!--Buttons-->
             <div class="button">
@@ -157,6 +166,18 @@
     <script src="script/script.js"></script>
     <script src="script/auth.js"></script>
     <script>
+
+function toggleMenu() {
+            const navLinks = document.querySelector('.Navlinks');
+            navLinks.classList.toggle('active');
+            const hamburger = document.querySelector('.hamburger');
+            hamburger.classList.toggle('active');
+        }
+        
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+
         // Example data for charts
         const experimentData = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June'],
